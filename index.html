@@ -27,5 +27,13 @@ document.getElementById('year').textContent=new Date().getFullYear();
 // Reveal sections when they enter the viewport
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
 </script>
+<!-- The following code should be placed inside the body of the frontend HTML file. -->
+<script src="https://agent.hust.edu.cn/resources/product/llm/public/sdk/embedLite.js"></script>
+<script>
+  new HiagentWebSDK.WebLiteClient({
+    appKey: "dbc13ijo5a80b5nqqbk0",
+    baseUrl: "https://agent.hust.edu.cn",
+  });
+</script>
 </body>
 </html>
